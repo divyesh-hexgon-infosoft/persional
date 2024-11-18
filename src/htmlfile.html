@@ -1,0 +1,433 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Divyesh's Resume</title>
+    <script defer="" src="/static/js/bundle.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        code {
+            font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+                monospace;
+        }
+
+        /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxTQUFTO0VBQ1Q7O2NBRVk7RUFDWixtQ0FBbUM7RUFDbkMsa0NBQWtDO0FBQ3BDOztBQUVBO0VBQ0U7YUFDVztBQUNiIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gIG1hcmdpbjogMDtcbiAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgJ1JvYm90bycsICdPeHlnZW4nLFxuICAgICdVYnVudHUnLCAnQ2FudGFyZWxsJywgJ0ZpcmEgU2FucycsICdEcm9pZCBTYW5zJywgJ0hlbHZldGljYSBOZXVlJyxcbiAgICBzYW5zLXNlcmlmO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcbn1cblxuY29kZSB7XG4gIGZvbnQtZmFtaWx5OiBzb3VyY2UtY29kZS1wcm8sIE1lbmxvLCBNb25hY28sIENvbnNvbGFzLCAnQ291cmllciBOZXcnLFxuICAgIG1vbm9zcGFjZTtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */
+    </style>
+    <style>
+        .App {
+            text-align: center;
+        }
+
+        .App-logo {
+            height: 40vmin;
+            pointer-events: none;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .App-logo {
+                animation: App-logo-spin infinite 20s linear;
+            }
+        }
+
+        .App-header {
+            background-color: #282c34;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: calc(10px + 2vmin);
+            color: white;
+        }
+
+        .App-link {
+            color: #61dafb;
+        }
+
+        @keyframes App-logo-spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9BcHAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsY0FBYztFQUNkLG9CQUFvQjtBQUN0Qjs7QUFFQTtFQUNFO0lBQ0UsNENBQTRDO0VBQzlDO0FBQ0Y7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsaUJBQWlCO0VBQ2pCLGFBQWE7RUFDYixzQkFBc0I7RUFDdEIsbUJBQW1CO0VBQ25CLHVCQUF1QjtFQUN2Qiw2QkFBNkI7RUFDN0IsWUFBWTtBQUNkOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFO0lBQ0UsdUJBQXVCO0VBQ3pCO0VBQ0E7SUFDRSx5QkFBeUI7RUFDM0I7QUFDRiIsInNvdXJjZXNDb250ZW50IjpbIi5BcHAge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5BcHAtbG9nbyB7XG4gIGhlaWdodDogNDB2bWluO1xuICBwb2ludGVyLWV2ZW50czogbm9uZTtcbn1cblxuQG1lZGlhIChwcmVmZXJzLXJlZHVjZWQtbW90aW9uOiBuby1wcmVmZXJlbmNlKSB7XG4gIC5BcHAtbG9nbyB7XG4gICAgYW5pbWF0aW9uOiBBcHAtbG9nby1zcGluIGluZmluaXRlIDIwcyBsaW5lYXI7XG4gIH1cbn1cblxuLkFwcC1oZWFkZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjgyYzM0O1xuICBtaW4taGVpZ2h0OiAxMDB2aDtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGZvbnQtc2l6ZTogY2FsYygxMHB4ICsgMnZtaW4pO1xuICBjb2xvcjogd2hpdGU7XG59XG5cbi5BcHAtbGluayB7XG4gIGNvbG9yOiAjNjFkYWZiO1xufVxuXG5Aa2V5ZnJhbWVzIEFwcC1sb2dvLXNwaW4ge1xuICBmcm9tIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTtcbiAgfVxuICB0byB7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTtcbiAgfVxufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */
+    </style>
+    <style>
+        .hdrr {
+            font-size: 22px;
+        }
+
+        .scname {
+            font-size: 18px;
+        }
+
+        .location {
+            text-align: right;
+        }
+
+        .fntsize {
+            font-size: 15px;
+        }
+
+        .line {
+            width: 112px;
+            height: 47px;
+            border-bottom: 1px solid black;
+            /* position: absolute; */
+        }
+
+        /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnQvRWR1Y2F0aW9uL1N0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGVBQWU7QUFDakI7QUFDQTtFQUNFLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxpQkFBaUI7QUFDbkI7O0FBRUE7SUFDSSxlQUFlO0FBQ25COztBQUVBO0VBQ0UsWUFBWTtFQUNaLFlBQVk7RUFDWiw4QkFBOEI7RUFDOUIsd0JBQXdCO0FBQzFCIiwic291cmNlc0NvbnRlbnQiOlsiLmhkcnIge1xyXG4gIGZvbnQtc2l6ZTogMjJweDtcclxufVxyXG4uc2NuYW1lIHtcclxuICBmb250LXNpemU6IDE4cHg7XHJcbn1cclxuXHJcbi5sb2NhdGlvbiB7XHJcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XHJcbn1cclxuXHJcbi5mbnRzaXple1xyXG4gICAgZm9udC1zaXplOiAxNXB4O1xyXG59XHJcblxyXG4ubGluZSB7XHJcbiAgd2lkdGg6IDExMnB4O1xyXG4gIGhlaWdodDogNDdweDtcclxuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgYmxhY2s7XHJcbiAgLyogcG9zaXRpb246IGFic29sdXRlOyAqL1xyXG59XHJcbiJdLCJzb3VyY2VSb290IjoiIn0= */
+    </style>
+    <style>
+        .headerlink {
+            text-decoration: none;
+            color: black;
+        }
+
+        .codingprofilephoto {
+            height: 15px;
+            margin-top: -2px;
+        }
+
+        .textsize {
+            /* font-size: small; */
+            font-size: 14px;
+        }
+
+        /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnQvSGVhZGVyL1N0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFxQjtFQUNyQixZQUFZO0FBQ2Q7QUFDQTtJQUNJLFlBQVk7SUFDWixnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxzQkFBc0I7SUFDdEIsZUFBZTtBQUNuQiIsInNvdXJjZXNDb250ZW50IjpbIi5oZWFkZXJsaW5rIHtcclxuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgY29sb3I6IGJsYWNrO1xyXG59XHJcbi5jb2Rpbmdwcm9maWxlcGhvdG97XHJcbiAgICBoZWlnaHQ6IDE1cHg7XHJcbiAgICBtYXJnaW4tdG9wOiAtMnB4O1xyXG59XHJcblxyXG4udGV4dHNpemV7XHJcbiAgICAvKiBmb250LXNpemU6IHNtYWxsOyAqL1xyXG4gICAgZm9udC1zaXplOiAxNHB4O1xyXG59XHJcbiJdLCJzb3VyY2VSb290IjoiIn0= */
+    </style>
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <div class="" style="color: rgb(29, 33, 37);">
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <center>
+                                        <h1 style="color: rgb(35, 40, 46);">Fenil Domadiya</h1>
+                                    </center>
+                                </div>
+                                <div>
+                                    <center><a class=" textsize bi-phone-fill headerlink"> (+91)9265068875</a>
+                                        &nbsp;&nbsp; | &nbsp;&nbsp;<a class=" textsize bi-envelope-fill headerlink">
+                                            fenildomadiya115@gmail.com</a>&nbsp;&nbsp; | &nbsp;&nbsp;<a
+                                            class=" textsize bi-linkedin  headerlink"
+                                            href="https://linkedin.com/in/fenil-domadiya/">
+                                            fenil-domadiya</a>&nbsp;&nbsp; | &nbsp;&nbsp;<a
+                                            class=" textsize bi-github  headerlink" href="https://github.com/fad1105/">
+                                            fad1105</a><br><a class=" textsize headerlink codingprofilephoto "
+                                            href="https://www.codechef.com/users/fad1105"><img
+                                                src="/siteimage/codechef1.png" class="codingprofilephoto"> CodeChef :
+                                            fad1105</a>&nbsp; | &nbsp;<a
+                                            class=" textsize headerlink codingprofilephoto "
+                                            href="https://leetcode.com/fad1105/"><img src="/siteimage/leetcode1.png"
+                                                class="codingprofilephoto"> Leetcode : fad1105</a>&nbsp; | &nbsp;<a
+                                            class=" textsize headerlink codingprofilephoto "
+                                            href="https://www.hackerrank.com/fad1105"><img
+                                                src="/siteimage/hackerrank1.png" class="codingprofilephoto"> HackerRank
+                                            : fad1105</a></center>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div class=" row">
+                                    <h4 class="col-auto  " style="margin-top: -3px; margin-bottom: -1px;">
+                                        <font color="#23282e">Education</font><b></b>
+                                    </h4>
+                                    <div class="col">
+                                        <div style="padding-top: 22px; margin-left: -18px;"></div>
+                                        <div
+                                            style="height: 1px; color: black; background-color: rgb(139, 148, 163); margin-left: -18px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-2 ps-3">
+                                <div>
+                                    <div class="row">
+                                        <div class="col scname p-2 ps-3"
+                                            style="color: rgb(35, 40, 46); margin: -2px -2px -10px;">
+                                            <h5>Dharmsinh Desai University</h5>
+                                        </div>
+                                        <div class="col location "> Nadiad, IN </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col  fntsize ms-3">B.TECH Computer Engineering | CPI : 8.46/10
+                                            &nbsp;</div>
+                                        <div class="col  location ">07/2019 ‑ Present </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="row">
+                                        <div class="col-auto scname p-2 ps-3"
+                                            style="color: rgb(35, 40, 46); margin-bottom: -10px; margin-top: 2px;">
+                                            <h5>Shree Taxashila Vidhyalaya</h5>
+                                        </div>
+                                        <div class="col location pt-2"> Junagadh, IN </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-auto fntsize ms-3">HSC(Science) | GSEB Board: 76.33 % | ACPC
+                                            rank : 311</div>
+                                        <div class="col  location ">06/2017 - 04/2019</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div class=" row">
+                                    <h4 class="col-auto  " style="margin-top: -3px; margin-bottom: -1px;">
+                                        <font color="#23282e">Project</font><b></b>
+                                    </h4>
+                                    <div class="col">
+                                        <div style="padding-top: 22px; margin-left: -18px;"></div>
+                                        <div
+                                            style="height: 1px; color: black; background-color: rgb(139, 148, 163); margin-left: -18px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-bottom: 10px;"></div>
+                            <div class="p-2 ps-3">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-auto scname">
+                                            <h5 style="color: rgb(35, 40, 46); margin: -2px;">Dcoder <span
+                                                    class="fntsize">[<i>MERN Stack, Bootstrap</i>] &nbsp;<a
+                                                        class="bi-github " href="https://github.com/fad1105/Dcoder"
+                                                        style="text-decoration: none; color: black;"></a></span></h5>
+                                        </div>
+                                        <div class="col " style="text-align: right;"> 01/2022 - Present</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col fntsize"></div>
+                                        <div class="col  location "> </div>
+                                    </div>
+                                    <div class=" ">
+                                        <ul>
+                                            <li>A competitive programming portal.</li>
+                                            <li>Dcoder contains a compiler for some of the languages, DSA Problem list,
+                                                upcoming contests list of various coding platforms.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="row">
+                                        <div class="col-auto scname">
+                                            <h5 style="color: rgb(35, 40, 46); margin: -2px;">Online Farmer Education
+                                                System <span class="fntsize">[<i>MERN Stack, Bootstrap</i>] &nbsp;<a
+                                                        class="bi-github "
+                                                        href="https://github.com/fad1105/Online-Farmer-Education-System"
+                                                        style="text-decoration: none; color: black;"></a></span></h5>
+                                        </div>
+                                        <div class="col " style="text-align: right;"> 07/2021 - 10/2021</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col fntsize"></div>
+                                        <div class="col  location "> </div>
+                                    </div>
+                                    <div class=" ">
+                                        <ul>
+                                            <li>Farmer can get information about different crops and weather.</li>
+                                            <li>Experts can post different information about different crop and
+                                                government scheme.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="row">
+                                        <div class="col-auto scname">
+                                            <h5 style="color: rgb(35, 40, 46); margin: -2px;">Movie Ticket Booking <span
+                                                    class="fntsize">[<i>Laravel, Bootstrap, MySQL</i>] &nbsp;<a
+                                                        class="bi-github "
+                                                        href="https://github.com/fad1105/Movie-Ticket-Booking"
+                                                        style="text-decoration: none; color: black;"></a></span></h5>
+                                        </div>
+                                        <div class="col " style="text-align: right;"> 02/2021 - 04/2021)</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col fntsize"></div>
+                                        <div class="col  location "> </div>
+                                    </div>
+                                    <div class=" ">
+                                        <ul>
+                                            <li>Customer can book seat on different show of the movie based on location
+                                                and time.</li>
+                                            <li>Branch-admin can add new show of different moive .</li>
+                                            <li>Admin can create new branch and add new movie </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div class=" row">
+                                    <h4 class="col-auto  " style="margin-top: -3px; margin-bottom: -1px;">
+                                        <font color="#23282e">Achievements</font><b></b>
+                                    </h4>
+                                    <div class="col">
+                                        <div style="padding-top: 22px; margin-left: -18px;"></div>
+                                        <div
+                                            style="height: 1px; color: black; background-color: rgb(139, 148, 163); margin-left: -18px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-2 ps-3">
+                                <table>
+                                    <thead></thead>
+                                    <tbody>
+                                        <tr class="row">
+                                            <td class="col-auto" style="margin-right: auto;"><span>2022</span></td>
+                                            <td class="col"><span>CodeChef Highest Rating :&nbsp;<b>1982</b>(<b>4
+                                                        star)</b></span></td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="col-auto" style="margin-right: auto;"><span>2022</span></td>
+                                            <td class="col"><span>Leetcode Highest Contest Rating
+                                                    :&nbsp;<b>1584</b></span></td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="col-auto" style="margin-right: auto;"><span>2022</span></td>
+                                            <td class="col"><span>CodeChef January Cook-Off 2022 Div-2 Global Rank:
+                                                    <b>79</b></span></td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="col-auto" style="margin-right: auto;"><span>2022</span></td>
+                                            <td class="col"><span>CodeChef February Lunchtime 2022 Div-2 Global Rank:
+                                                    <b>149</b></span></td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="col-auto" style="margin-right: auto;"><span>2021</span></td>
+                                            <td class="col"><span>CodeChef November Cook-Off 2021 Div-2 Global
+                                                    Rank-<b>285</b></span></td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="col-auto" style="margin-right: auto;"><span>2021</span></td>
+                                            <td class="col"><span>CodeChef Starters 12 Divison-2 Global Rank
+                                                    :&nbsp;<b>133</b></span></td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="col-auto" style="margin-right: auto;"><span>2021</span></td>
+                                            <td class="col"><span>CodeChef May Lunchtime 2021 Div-3 Global Rank:
+                                                    <b>292</b></span></td>
+                                        </tr>
+                                        <tr class="row">
+                                            <td class="col-auto" style="margin-right: auto;"><span>2022</span></td>
+                                            <td class="col"><span>Solved <b>500+</b> DSA problems and participated in
+                                                    <b>125+</b> programming contest.</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>
+                            <div class=" row">
+                                <h4 class="col-auto  " style="margin-top: -3px; margin-bottom: -1px;">
+                                    <font color="#23282e">Skills</font><b></b>
+                                </h4>
+                                <div class="col">
+                                    <div style="padding-top: 22px; margin-left: -18px;"></div>
+                                    <div
+                                        style="height: 1px; color: black; background-color: rgb(139, 148, 163); margin-left: -18px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" p-2 ps-3">
+                            <div class="row">
+                                <li class="col-auto" style="margin-right: -2px;">Programming</li>
+                                <div class="col">C/C++, Python(Basics), C#(Basics), JavaScript, MySQL, MongoDB,</div>
+                            </div>
+                            <div class="row">
+                                <li class="col-2 me-3">Web</li>
+                                <div class="col">ExpressJs, NodeJs, ReactJs, HTML5, CSS, bootstrap</div>
+                            </div>
+                            <div class="row">
+                                <li class="col-2 me-3">Tools</li>
+                                <div class="col">Git/Github, Visual Studio Code, Linux</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class=" row">
+                                <h4 class="col-auto  " style="margin-top: -3px; margin-bottom: -1px;">
+                                    <font color="#23282e">Coursework</font><b></b>
+                                </h4>
+                                <div class="col">
+                                    <div style="padding-top: 22px; margin-left: -18px;"></div>
+                                    <div
+                                        style="height: 1px; color: black; background-color: rgb(139, 148, 163); margin-left: -18px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" row p-2 ps-3">
+                            <li class="col-6">Data Structures and Algorithm</li>
+                            <li class="col-6">Database Management Systems</li>
+                            <li class="col-6">Object Oriented Programming</li>
+                            <li class="col-6">Software Engineering</li>
+                            <li class="col-6">Operating Systems</li>
+                            <li class="col-6">Computer Networks</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+
+</body>
+
+</html>

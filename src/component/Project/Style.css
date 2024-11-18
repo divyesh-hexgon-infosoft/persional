@@ -1,0 +1,50 @@
+.hdrr {
+  font-size: 22px;
+}
+.scname {
+  font-size: 18px;
+}
+
+.location {
+  text-align: right;
+}
+
+.fntsize{
+    /* font-size: 16px; */
+}
+
+.line {
+  width: 112px;
+  height: 47px;
+  border-bottom: 1px solid black;
+  /* position: absolute; */
+}
+
+.line-5 {
+  /* padding-top: ; */
+  
+  /* height: 5px;
+  background: linear-gradient(
+    to bottom,
+    transparent 2px,
+    black 2px,
+    black 3px,
+    transparent 3px
+  ); */
+}
+
+hr {
+  border: none;
+  border-top: 3px double #333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+hr:after {
+  background: #fff;
+  content: '§';
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
+}
